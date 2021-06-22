@@ -20,11 +20,15 @@
     "turbolinks": "^5.2.0",
     "typescript": "^4.3.2"
   },
+  "scripts": {
+    "test:e2e": "yarn cypress open"
+  },
   "version": "0.1.0",
   "devDependencies": {
     "@types/webpack-env": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
+    "cypress": "^7.5.0",
     "eslint": "^7.28.0",
     "eslint-config-preact": "^1.1.4",
     "eslint-plugin-react": "^7.24.0",

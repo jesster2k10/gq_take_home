@@ -66,17 +66,22 @@ export const IncentiveTableRow: React.FC<IncentiveTableRowProps> = ({
   }, [codeFieldRef, editing])
 
   return (
-    <tr className={classNames({
-      'bg-white': !isEven,
-      'bg-gray-50': isEven
-    })}>
+    <tr
+      data-testid="incentive-table-row"
+      className={classNames({
+        'bg-white': !isEven,
+        'bg-gray-50': isEven
+      })}
+    >
       <td className={tdClass}>{incentive.id}</td>
       <td className={tdClass}>
         <input
           type="text"
           ref={codeFieldRef}
+          name="code"
           autoFocus
           value={code}
+          data-testid="incentive-table-row__code"
           placeholder="Enter a code"
           className="w-full bg-transparent"
           style={{ width: `${code.length}ch` }}
@@ -106,6 +111,7 @@ export const IncentiveTableRow: React.FC<IncentiveTableRowProps> = ({
       <td className={tdClass}>
         <button
           onClick={handleDelete}
+          data-testid="incentive-table-row__delete"
           className="text-red-800 font-medium text-sm"
           type="button"
         >

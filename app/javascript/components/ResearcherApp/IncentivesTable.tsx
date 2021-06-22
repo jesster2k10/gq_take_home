@@ -27,7 +27,11 @@ export const IncentivesTable: React.FC<IncentivesTableProps> = ({
 
   return (
     <div className="overflow-hidden border border-gray-200 sm:rounded-lg">
-      <table className="min-w-full divide-y divide-gray-200">
+      <table
+        id="IncentivesTable"
+        data-testid="incentives-table"
+        className="min-w-full divide-y divide-gray-200"
+      >
         <thead className="bg-gray-50">
           <tr>
             {headers.map(header => (

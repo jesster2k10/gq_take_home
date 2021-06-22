@@ -35,6 +35,7 @@ export const IncentiveForm: React.FC<Props> = ({ data, onCreate }) => {
           className="text-xl border"
           type="text"
           name="incentive_code"
+          data-testid="incentives-form__code"
           placeholder="Enter the code"
           value={inputValue}
           onChange={e => setInputValue(e.currentTarget.value)}
@@ -44,6 +45,8 @@ export const IncentiveForm: React.FC<Props> = ({ data, onCreate }) => {
           <input
             type="number"
             placeholder="Max Uses"
+            name="incentive_max_uses"
+            data-testid="incentives-form__max-uses"
             value={maxUses}
             className="border text-xl"
             onChange={(e) => setMaxUses(parseInt(e.currentTarget.value, 10))}
@@ -51,6 +54,7 @@ export const IncentiveForm: React.FC<Props> = ({ data, onCreate }) => {
         </div>
         <button
           disabled={saving}
+          data-testid="incentives-form__submit"
           className="hover:bg-gray-100 bg-gray-200 rounded-md px-4 py-2"
           onClick={handleClickSave}
         >
