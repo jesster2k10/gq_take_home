@@ -1,9 +1,8 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class CandidateTest < ApplicationSystemTestCase
-
   describe 'redeeming the incentive' do
-    setup do 
+    setup do
       create(:incentive, code: 'COUPON_123')
     end
 
